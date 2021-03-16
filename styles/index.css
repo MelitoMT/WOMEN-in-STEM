@@ -1,0 +1,260 @@
+:root{
+    --purpleNav:#3E0F63;
+    --whiteNav:#ffff;
+    --purpleHome:#100A29;
+    --blueHome:#BDDFF1;
+    --pinkNav:rgb(251, 177, 223);
+}
+@font-face{
+    font-family: "NoBills";
+    src: url(./fonts/PostNoBillsColombo-ExtraBold.ttf);
+}
+@font-face{
+    font-family: "Prompt";
+    src: url(./fonts/Prompt-Light.ttf);
+}
+@font-face{
+    font-family: "PromptBold";
+    src: url(./fonts/Prompt-ExtraBold.ttf);
+}
+body{
+    margin: 0;
+    border:0;
+    color: var(--whiteNav);
+}
+header{  
+    position: fixed;  
+    z-index: 9000px;
+    height: 50px;
+    width: 100%;
+    background-color:var(--purpleNav);
+    text-align: center;
+}
+#nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#nav ul:nth-child(1){
+    font-family:"PromptBold";
+}
+#nav ul:not(:nth-child(1)){
+    font-family:"Prompt";
+}
+#nav ul{
+    padding-left: 6.5%;
+}
+#nav ul > a{
+    transition: all .5s;
+    text-decoration: none;
+    color: var(--whiteNav);
+}
+#nav ul > a:hover{
+    color: var(--pinkNav);
+}
+#home{
+    padding-top:30px;
+    z-index: -1;
+    position: relative;
+    height: 450px;
+    background-color: var(--purpleHome);
+}
+#home img{
+    position: absolute;
+    right: 0;
+    top:0%;
+}
+#homeTxtCont{
+    position:absolute;
+    width: 50%;
+    height: 100%;
+}
+#homeTxt{
+    text-align: center;
+    position: absolute;
+    width: 200px;
+    height: 500px;
+    left: calc(50% - 200px);
+    top:0px;
+}
+#homeTxt span{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+#homeTxt span:not(:nth-child(2)){
+    font-family: "NoBills";
+}
+#homeTxt span:nth-child(1){
+    color: var(--blueHome);
+    top:0%;
+    left:calc(50%);
+    font-size: 150px;
+}
+#homeTxt span:nth-child(2){
+    font-family: "PromptBold";
+    top:35%;
+    left:calc(50% + 100px);
+    font-size: 30px;
+}
+#homeTxt span:nth-child(3){
+    color: var(--pinkNav);
+    top:45%;
+    left:calc(50% + 80px);
+    font-size: 120px;
+}
+#description{
+    z-index: -1;
+    font-family: "Prompt";
+    position: relative;
+    background: linear-gradient(180deg, #50329F 0%, #100A29 100%);
+    width: 100%;
+    height: 300px;
+}
+#description p{
+    padding-top: 10px;
+    line-height: 40px;
+    font-size: 20px;
+    top:10%;
+    position: absolute;
+    width: 80%;
+    left:10%;
+}
+#mae{
+    background: linear-gradient(180deg, #FC8A37 0%, #B78400 100%);
+}
+#hypatia{
+    background: linear-gradient(180deg, #574883 0%, #2B2E69 100%);
+}
+#margaret{
+    background: linear-gradient(180deg, #3E80CD 0%, #0D1D45 100%);
+}
+#jane{
+    background: linear-gradient(180deg, #DBC138 0%, #B85117 100%);
+}
+#mary{
+    background: linear-gradient(180deg, #09554D 0%, #18201D 100%);
+}
+#ada{
+    background: linear-gradient(180deg, #616EA5 0%, #2B2E69 100%);
+}
+#marie{
+    background: linear-gradient(180deg, #E28EE3 0%, #300D45 100%);
+}
+.right{
+    right: 0;
+}
+.left{
+    left: 0;
+}
+.cardPic{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+}
+.picture{
+    position: absolute;
+    top:calc(50% - 125px);
+    left: calc(50% - 125px);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid var(--whiteNav);
+    background-size: cover;
+}
+.cardTxt{
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    font-family: "Prompt";
+    font-size: 18px;
+}
+.cardName{
+    padding-top: 50px;
+    position: relative;
+    left:20px;
+    font-family: "NoBills";
+    font-size: 60px;
+}
+.card{
+    z-index: -1;
+    height: 350px;
+    width: 100%;
+    position: relative;
+}
+.cardCont{
+    top:10%;
+    padding-top:60px;
+    position: absolute;
+    padding: 20px;
+    width: 60%;
+}
+#maeImg{
+    background-image: url("../img/Mae\ Jeminson.jpg");
+}
+#hypatiaImg{
+    background-image: url("../img/Hypatia.jpg");
+}
+#margaretImg{
+    background-image: url("../img/Margaret\ Hamilton.jpg");
+}
+#janeImg{
+    background-image: url("../img/JaneGoodall.jpg");
+}
+#maryImg{
+    background-image: url("../img/Mary\ Anning.jpg");
+}
+#adaImg{
+    background-image: url("../img/Ada\ Lovelace.jpg");
+}
+#marieImg{
+    background-image: url("../img/Marie\ Curie.jpg");
+}
+footer{
+    font-family: "Prompt";
+    width: 100%;
+    height: 120px;
+    background-color: var(--purpleNav);
+    position: relative;
+}
+footer > span{
+    position: absolute;
+    top:20%;
+    padding-left: 140px;
+}
+#social span{
+    padding-left: 40px;
+}
+#social{
+    width: 400px;
+    position: absolute;
+    right: 80px;
+    top:20%;
+}
+#socialIcons{
+    position: absolute;
+    top:30px;
+}
+#socialIcons a{
+    padding-left: 15px;
+    color: var(--whiteNav);
+    text-decoration: none;
+}
+.fa-twitter,.fa-facebook,.fa-instagram,.fa-pinterest,.fa-github{
+    transition: all 1s;
+}
+.fa-twitter:hover{
+    color:#09a8f8;
+}
+.fa-facebook:hover{
+    color:#3333b3;
+}
+.fa-instagram:hover{
+    color:#dd4c20;
+}
+.fa-pinterest:hover{
+    color:#c60e0e;
+}
+.fa-github:hover{
+    color:#9b0ec6;
+}
